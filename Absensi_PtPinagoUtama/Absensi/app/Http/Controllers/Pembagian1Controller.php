@@ -12,7 +12,12 @@ class Pembagian1Controller extends Controller
      */
     public function index()
     {
-        //
+        //panggil model Pembagian1
+        $result = Pembagian1::all();
+        //dd($result); untuk menampilkan data db
+
+        // kirim data $result ke view Pembagian1/index.blade.php
+        return view('pembagian1.index')->with('pembagian1', $result);
     }
 
     /**
@@ -20,7 +25,7 @@ class Pembagian1Controller extends Controller
      */
     public function create()
     {
-        //
+        return view('pembagian1.create');
     }
 
     /**
@@ -28,7 +33,19 @@ class Pembagian1Controller extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //validasi input nama imput disamakan dengan tabel kolom
+        $input = $request->validate([
+           
+            //"pembagian1_id"       =>"required",
+            "pembagian1_nama"     =>"required",
+            "pembagian1_ket"      =>"required",
+
+        ]);
+        //simpan
+        Pembagian1::create($input);
+
+        //redirect beserta pesan sukses
+        return redirect()->route('pembagian1.index')->with('success', $request->pembagian1_nama.' Berhasil Disimpan');
     }
 
     /**

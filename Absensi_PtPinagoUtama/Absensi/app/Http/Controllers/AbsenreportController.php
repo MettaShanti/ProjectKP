@@ -12,7 +12,12 @@ class AbsenreportController extends Controller
      */
     public function index()
     {
-        //
+        //panggil model Absenreport
+        $result = Absenreport::all();
+        //dd($result); untuk menampilkan data db
+
+        // kirim data $result ke view Absenreport/index.blade.php
+        return view('absenreport.index')->with('absenreport', $result);
     }
 
     /**
@@ -20,7 +25,7 @@ class AbsenreportController extends Controller
      */
     public function create()
     {
-        //
+        return view('absenreport.create');
     }
 
     /**
@@ -28,7 +33,30 @@ class AbsenreportController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //validasi input nama imput disamakan dengan tabel kolom
+        $input = $request->validate([
+           
+            "pegawai_id"      =>"required",
+            "Pin"             =>"required",
+            "Nip"             =>"required",
+            "Nama"            =>"required",
+            "Jabatan"         =>"required",
+            "Departemen"      =>"required",
+            "Divisi"          =>"required",
+            "Tanggal"         =>"required",
+            "Bulan"           =>"required",
+            "Hari"            =>"required",
+            "Scan_awal"       =>"required",
+            "Scan_akhir"      =>"required",
+            "Status"          =>"required",
+            "Jam_Kerja"       =>"required",
+
+        ]);
+        //simpan
+        //Absenreport::create($input);
+
+        //redirect beserta pesan sukses
+        //return redirect()->route('absenreport.index')->with('success', $request->pembagian3_nama.' Berhasil Disimpan');
     }
 
     /**
