@@ -36,19 +36,19 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{route('mahasiswa.index')}}">
+          <a class="nav-link" href="{{route('attlog.index')}}">
             <i class="mdi mdi-account menu-icon"></i>
-            <span class="menu-title">Absen</span>
+            <span class="menu-title">Absensi</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{route('mahasiswa.index')}}">
+          <a class="nav-link" href="{{route('pegawai.index')}}">
             <i class="mdi mdi-account menu-icon"></i>
             <span class="menu-title">Pegawai</span>
           </a>
         </li>
          <li class="nav-item">
-          <a class="nav-link" href="{{route('fakultas.index')}}">
+          <a class="nav-link" href="{{route('pembagian1.index')}}">
             <!--untuk ubah icon -->
             <i class="mdi mdi-bank menu-icon"></i>
              <!--akhir icon -->
@@ -56,7 +56,7 @@
           </a>
         </li>
          <li class="nav-item">
-          <a class="nav-link" href="{{route('prodi.index')}}">
+          <a class="nav-link" href="{{route('pembagian2.index')}}">
             <!--untuk ubah icon -->
             <i class="mdi mdi-book-multiple menu-icon"></i>
              <!--akhir icon -->
@@ -64,13 +64,13 @@
           </a>
         </li>
          <li class="nav-item">
-          <a class="nav-link" href="{{route('mahasiswa.index')}}">
+          <a class="nav-link" href="{{route('pembagian3.index')}}">
             <i class="mdi mdi-account menu-icon"></i>
             <span class="menu-title">Pembagian 3</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{route('mahasiswa.index')}}">
+          <a class="nav-link" href="{{route('pegawai.index')}}">
             <i class="mdi mdi-account menu-icon"></i>
             <span class="menu-title">Data Absen</span>
           </a>

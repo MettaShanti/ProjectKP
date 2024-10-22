@@ -1,4 +1,4 @@
-@extends('layouts.main')
+<!-- @extends('layouts.main')
 
 @section('content')
     <h4>{{ $pegawai['pegawai_nama']}}</h4>
@@ -105,4 +105,4 @@
         <td>{{ $pegawai['alamat']}}</td>
     </tr>
 </table>
-@endsection
+@endsection -->
