@@ -14,7 +14,7 @@ class PegawaiController extends Controller
     {
         //panggil model pegawai
         $result = Pegawai::all();
-        //dd($result); untuk menampilkan data db
+        //dd($result); //untuk menampilkan data db
 
         // kirim data $result ke view Pegawai/index.blade.php
         return view('pegawai.index')->with('pegawai', $result);
