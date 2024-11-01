@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-<h4>Pegawai</h4>
+<h4>Detail Pegawai</h4>
 <form action="{{ route('pegawai.store', $pegawai['id']) }}" method="post">
     @csrf
 
