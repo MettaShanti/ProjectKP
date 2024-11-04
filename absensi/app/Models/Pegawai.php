@@ -2,10 +2,12 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Pegawai extends Model
 {
+    use HasFactory;
     protected $fillable = ['pegawai_id', 'pegawai_pin', 'pegawai_nip','pegawai_nama','pegawai_alias',
                             'pegawai_pwd','pegawai_rfid','pegawai_privilege','pegawai_telp','pegawai_status',
                             'tempat_lahir','tgl_lahir','pembagian1_id','pembagian2_id','pembagian3_id',
