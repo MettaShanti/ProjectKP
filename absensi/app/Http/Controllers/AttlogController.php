@@ -12,7 +12,12 @@ class AttlogController extends Controller
      */
     public function index()
     {
-        //
+        //panggil model attlog
+        $result = Attlog::all();
+        //dd($result); untuk menampilkan data db
+
+        // kirim data $result ke view attlog/index.blade.php
+        return view('attlog.index')->with('attlog', $result);
     }
 
     /**
@@ -20,7 +25,7 @@ class AttlogController extends Controller
      */
     public function create()
     {
-        //
+        return view('attlog.create');
     }
 
     /**
@@ -28,7 +33,22 @@ class AttlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //validasi input nama imput disamakan dengan tabel kolom
+        $input = $request->validate([
+            "sn"          =>"required",
+            "scan_date"   =>"required",
+            "pin"         =>"required",
+            "verifymode"  =>"required",
+            "inoutmode"   =>"required",
+            "reserved"    =>"required",
+            "work_code"   =>"required",
+            "att_id"      =>"required"
+        ]);
+        //simpan
+        Attlog::create($input);
+
+        //redirect beserta pesan sukses
+        return redirect()->route('attlog.index')->with('success', ' Berhasil Disimpan');
     }
 
     /**

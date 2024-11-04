@@ -6,14 +6,14 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>sn</th>
-                <th>scan_date</th>
-                <th>pin</th>
-                <th>verifymode</th>
-                <th>inoutmode</th>
-                <th>reserved</th>
-                <th>work_code</th>
-                <th>att_id</th>
+                <th>Sn</th>
+                <th>Scan Date</th>
+                <th>Pin</th>
+                <th>Verifymode</th>
+                <th>Inoutmode</th>
+                <th>Reserved</th>
+                <th>Work Code</th>
+                <th>Att Id</th>
             </tr>
         </thead>
         <tbody>
@@ -27,13 +27,6 @@
                 <td>{{ $row['reserved']}}</td>
                 <td>{{ $row['work_code']}}</td>
                 <td>{{ $row['att_id']}}</td>
-                <!-- {{-- untuk membuat btn hapus --}}
-                    <form action="{{ route('pegawai.destroy', $row['id'])}}" method="post" style="display:inline"> 
-                        @method('DELETE')
-                        @csrf
-                        <button class="btn btn-xs btn-danger">HAPUS</button>
-                    </form> -->
-                    {{-- style="display:inline" untuk memindahkan btn ke samping --}}</td>
             </tr>
             @endforeach
             </tbody>
