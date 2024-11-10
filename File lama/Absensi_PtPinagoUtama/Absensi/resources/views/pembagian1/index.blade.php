@@ -1,0 +1,31 @@
+@extends('layouts.main')
+
+@section('content')
+    <h4>Jabatan</h4>
+    <a href="{{route('pembagian1.create')}}" class="btn btn-primary">TAMBAH</a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id Jabatan</th>
+                <th>Nama Jabatan</th>
+                <th>Keterangan Jabatan</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($pembagian1 as $row)
+            <tr>
+                <td>{{ $row['pembagian1_id']}}</td>
+                <td>{{ $row['pembagian1_nama']}}</td>
+                <td>{{ $row['pembagian1_ket']}}</td>
+                {{-- untuk membuat btn hapus --}}
+                    <form action="{{ route('pembagian1.destroy', $row['id'])}}" method="post" style="display:inline"> 
+                        @method('DELETE')
+                        @csrf
+                        <button class="btn btn-xs btn-danger">HAPUS</button>
+                    </form>
+                    {{-- style="display:inline" untuk memindahkan btn ke samping --}}</td>
+            </tr>
+            @endforeach
+            </tbody>
+        </table>
+@endsection
