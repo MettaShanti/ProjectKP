@@ -2,7 +2,7 @@
 
 @section('content')
 <h4>Absensi</h4>
-<form action="{{ route('attlog.update', $attlog['id']) }}" method="post">
+<form action="{{ route('attlog.store') }}" method="post">
     @csrf
     Sn
     @error('sn')
@@ -14,7 +14,7 @@
     @error('scan_date')
         <span class="text-danger">({{ $message }})</span>
     @enderror
-    <input type="text" name="scan_date" id="" class="form-control mb-2">
+    <input type="datetime-local" name="scan_date" id="" class="form-control mb-2">
     
     Verifymode
     @error('verifymode')

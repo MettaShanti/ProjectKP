@@ -33,6 +33,7 @@
                 <th>Password Fio Desktop</th>
                 <th>Status Login Fio Desktop</th>
                 <th>New Pegawai Id</th>
+                <th>#</th>
             </tr>
         </thead>
         <tbody>

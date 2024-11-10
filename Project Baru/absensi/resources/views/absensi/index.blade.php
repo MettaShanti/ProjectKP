@@ -4,7 +4,7 @@
     <h4>Absensi</h4>
     <a href="{{route('attlog.create')}}" class="btn btn-primary">TAMBAH</a>
     <table class="table table-striped">
-        <thead>
+        <!-- <thead>
             <tr>
                 <th>Sn</th>
                 <th>Scan Date</th>
@@ -29,6 +29,6 @@
                 <td>{{ $row['att_id']}}</td>
             </tr>
             @endforeach
-            </tbody>
+            </tbody> -->
         </table>
 @endsection

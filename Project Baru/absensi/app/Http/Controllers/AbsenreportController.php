@@ -12,7 +12,12 @@ class AbsenreportController extends Controller
      */
     public function index()
     {
-        //
+        //panggil model absenreport
+        $result = Absenreport::all();
+        //dd($result); untuk menampilkan data db
+
+        // kirim data $result ke view absenreport/index.blade.php
+        return view('laporan.index')->with('absenreport', $result);
     }
 
     /**
@@ -20,7 +25,7 @@ class AbsenreportController extends Controller
      */
     public function create()
     {
-        //
+        return view('attlog.create');
     }
 
     /**

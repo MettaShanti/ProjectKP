@@ -2,7 +2,7 @@
 
 @section('content')
 <h4>Detail Pegawai</h4>
-<form action="{{ route('pegawai.store', $pegawai['id']) }}" method="post">
+<form action="{{ route('pegawai.store')}}" method="post">
     @csrf
 
     Id Pegawai
@@ -117,8 +117,7 @@
     @error('tgl_masuk_pertama')
         <span class="text-danger">({{ $message }})</span>
     @enderror 
-    <input type="date
-    " name="tgl_masuk_pertama" id="" class="form-control mb-2">
+    <input type="date" name="tgl_masuk_pertama" id="" class="form-control mb-2">
 
     Photo Path
     @error('photo_path')
