@@ -17,7 +17,7 @@ class Pembagian1Controller extends Controller
         //dd($result); untuk menampilkan data db
 
         // kirim data $result ke view Pembagian1/index.blade.php
-        return view('jabatan.index')->with('pembagian1', $result);
+        return view('pembagian1.index')->with('pembagian1', $result);
     }
 
     /**
@@ -25,7 +25,7 @@ class Pembagian1Controller extends Controller
      */
     public function create()
     {
-        return view('jabatan.create');
+        return view('pembagian1.create');
     }
 
     /**

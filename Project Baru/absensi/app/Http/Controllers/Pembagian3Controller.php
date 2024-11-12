@@ -17,7 +17,7 @@ class Pembagian3Controller extends Controller
         //dd($result); untuk menampilkan data db
 
         // kirim data $result ke view Pembagian3/index.blade.php
-        return view('divisi.index')->with('pembagian3', $result);
+        return view('pembagian3.index')->with('pembagian3', $result);
     }
 
     /**
