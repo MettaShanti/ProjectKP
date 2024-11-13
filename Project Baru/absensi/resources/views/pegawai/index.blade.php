@@ -66,9 +66,9 @@
                 <td>{{ $row['password_fio_desktop']}}</td>
                 <td>{{ $row['status_login_fio_desktop']}}</td>
                 <td>{{ $row['new_pegawai_id']}}</td>
-                <td><a href="{{ route('pegawai.edit', $row ['id'] )}}" class="btn btn-xs btn-warning">UBAH</a>
+                <td><a href="{{ route('pegawai.edit', $row ['pegawai_id'] )}}" class="btn btn-xs btn-warning">UBAH</a>
                 {{-- untuk membuat btn hapus --}}
-                    <form action="{{ route('pegawai.destroy', $row['id'])}}" method="post" style="display:inline"> 
+                    <form action="{{ route('pegawai.destroy', $row['pegawai_id'])}}" method="post" style="display:inline"> 
                         @method('DELETE')
                         @csrf
                         <button class="btn btn-xs btn-danger">HAPUS</button>
