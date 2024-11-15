@@ -35,7 +35,7 @@ class PegawaiController extends Controller
     {
         //validasi input nama imput disamakan dengan tabel kolom
         $input = $request->validate([
-            //"pegawai_id"                    =>"required",
+            "pegawai_id"                    =>"required",
             "pegawai_pin"                   =>"required",
             "pegawai_nip"                   =>"required",
             "pegawai_nama"                  =>"required",

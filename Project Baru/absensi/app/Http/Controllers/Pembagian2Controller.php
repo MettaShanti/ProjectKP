@@ -36,7 +36,7 @@ class Pembagian2Controller extends Controller
         //validasi input nama imput disamakan dengan tabel kolom
         $input = $request->validate([
            
-            //"pembagian1_id"       =>"required",
+            "pembagian1_id"       =>"required",
             "pembagian2_nama"     =>"required",
             "pembagian2_ket"      =>"required",
 

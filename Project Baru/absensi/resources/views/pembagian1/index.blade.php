@@ -17,8 +17,9 @@
                 <td>{{ $row['pembagian1_id']}}</td>
                 <td>{{ $row['pembagian1_nama']}}</td>
                 <td>{{ $row['pembagian1_ket']}}</td>
+                <td><a href="{{ route('pembagian1.edit', $row ['pembagian1_id'] )}}" class="btn btn-xs btn-warning">UBAH</a>
                 {{-- untuk membuat btn hapus --}}
-                    <form action="{{ route('pembagian1.destroy', $row['id'])}}" method="post" style="display:inline"> 
+                    <form action="{{ route('pembagian1.destroy', $row['pembagian1_id'])}}" method="post" style="display:inline"> 
                         @method('DELETE')
                         @csrf
                         <button class="btn btn-xs btn-danger">HAPUS</button>
