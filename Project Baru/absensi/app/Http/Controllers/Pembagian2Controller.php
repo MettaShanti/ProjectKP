@@ -36,7 +36,7 @@ class Pembagian2Controller extends Controller
         //validasi input nama imput disamakan dengan tabel kolom
         $input = $request->validate([
            
-            "pembagian1_id"       =>"required",
+            //"pembagian2_id"       =>"required",
             "pembagian2_nama"     =>"required",
             "pembagian2_ket"      =>"required",
 
@@ -59,17 +59,31 @@ class Pembagian2Controller extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Pembagian2 $pembagian2)
+    public function edit($pembagian2_id)
     {
-        //
+        // edit data
+        $pembagian2 = Pembagian2::find($pembagian2_id);
+        return view('pembagian2.edit')->with('pembagian2', $pembagian2);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Pembagian2 $pembagian2)
+    public function update(Request $request, $pembagian2_id)
     {
-        //
+        $pembagian2 = Pembagian2::find($pembagian2_id);
+        $input = $request->validate([
+           
+            //"pembagian2_id"       =>"required",
+            "pembagian2_nama"     =>"required",
+            "pembagian2_ket"      =>"required",
+
+        ]);
+        //update
+        $pembagian2->update($input);
+
+        //redirect beserta pesan sukses
+        return redirect()->route('pembagian2.index')->with('success', $request->pembagian2_nama.' Berhasil Diubah');
     }
 
     /**
