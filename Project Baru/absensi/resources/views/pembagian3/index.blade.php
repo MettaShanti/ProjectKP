@@ -3,12 +3,13 @@
 @section('content')
     <h4>Divisi</h4>
     <a href="{{route('pembagian3.create')}}" class="btn btn-primary">TAMBAH</a>
-    <table class="table table-striped">
+    <table id="example" class="display nowrap" style="width:100%">
         <thead>
             <tr>
                 <th>Id Divisi</th>
                 <th>Nama Divisi</th>
                 <th>Keterangan Divisi</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>

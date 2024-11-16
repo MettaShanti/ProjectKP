@@ -3,7 +3,8 @@
 @section('content')
     <h4>Pegawai</h4>
     <a href="{{route('pegawai.create')}}" class="btn btn-primary">TAMBAH</a>
-    <table class="table table-striped" >
+    <!-- <table id="example" class="display nowrap" style="width:100%"> tambah ini juga -->
+    <table id="example" class="display nowrap" style="width:100%">
         <thead>
             <tr>
                 <th>Id Pegawai</th>

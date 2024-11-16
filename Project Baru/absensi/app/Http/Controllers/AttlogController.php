@@ -32,24 +32,38 @@ class AttlogController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
-        //validasi input nama imput disamakan dengan tabel kolom
-        $input = $request->validate([
-            "sn"          =>"required",
-            "scan_date"   =>"required",
-            "pin"         =>"required",
-            "verifymode"  =>"required",
-            "inoutmode"   =>"required",
-            "reserved"    =>"required",
-            "work_code"   =>"required",
-            "att_id"      =>"required"
-        ]);
-        //simpan
-        Attlog::create($input);
+{
+    // Validasi input, tanpa `sn` karena akan di-generate otomatis
+    $input = $request->validate([
+        "scan_date"   => "required|date", 
+        "pin"         => "required",
+        "verifymode"  => "required",
+        "inoutmode"   => "required",
+        "reserved"    => "required",
+        "work_code"   => "required",
+        "att_id"      => "required"
+    ]);
 
-        //redirect beserta pesan sukses
-        return redirect()->route('attlog.index')->with('success', ' Berhasil Disimpan');
-    }
+    // Generate nilai untuk `sn` dengan format ATL-att_id-scandate
+    $generatedSn = 'ATL-' . $input['att_id'] . '-' . date('Ymd', strtotime($input['scan_date']));
+
+    // Masukkan nilai `sn` yang sudah digenerate ke dalam data input
+    $input['sn'] = $generatedSn;
+
+    // verifymode yang diatas dihilangkan
+    $input['verifymode'] = '001';
+    $input['inoutmode'] = '001';
+    $input['reserved'] = '001';
+    $input['work_code'] = '001';
+    $input['att_id'] = '001';
+
+    // Simpan ke database
+    Attlog::create($input);
+
+    // Redirect beserta pesan sukses
+    return redirect()->route('attlog.index')->with('success', 'Berhasil Disimpan');
+}
+
 
     /**
      * Display the specified resource.

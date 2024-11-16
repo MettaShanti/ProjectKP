@@ -4,11 +4,11 @@
 <h4>Absensi</h4>
 <form action="{{ route('attlog.store') }}" method="post">
     @csrf
-    Sn
+    <!-- Sn
     @error('sn')
         <span class="text-danger">({{ $message }})</span>
     @enderror
-    <input type="numer" name="sn" id="" class="form-control mb-2">
+    <input type="numer" name="sn" id="" class="form-control mb-2"> -->
     
     Scan Date 
     @error('scan_date')
@@ -16,7 +16,13 @@
     @enderror
     <input type="datetime-local" name="scan_date" id="" class="form-control mb-2">
     
-    Verifymode
+    Pin
+    @error('pin')
+        <span class="text-danger">({{ $message }})</span>
+    @enderror
+    <input type="numer" name="pin" id="" class="form-control mb-2">
+
+    <!-- Verifymode
     @error('verifymode')
         <span class="text-danger">({{ $message }})</span>
     @enderror 
@@ -44,7 +50,7 @@
     @error('att_id')
         <span class="text-danger">({{ $message }})</span>
     @enderror 
-    <input type="text" name="att_id" id="" class="form-control mb-2">
+    <input type="text" name="att_id" id="" class="form-control mb-2"> -->
 
     <button type="submit" class="btn btn-primary">Simpan</button>
 </form>

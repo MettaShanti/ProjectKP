@@ -2,7 +2,7 @@
 
 @section('content')
 <h4>Absensi</h4>
-<form action="{{ route('attlog.update', $attlog['id']) }}" method="post">
+<form action="{{ route('attlog.store') }}" method="post">
     @csrf
     Id Pegawai
     @error('pegawai_id')

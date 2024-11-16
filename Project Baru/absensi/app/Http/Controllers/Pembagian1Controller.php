@@ -36,7 +36,7 @@ class Pembagian1Controller extends Controller
         //validasi input nama, input disamakan dengan tabel kolom
         $input = $request->validate([
            
-            //"pembagian1_id"       =>"required",
+            "pembagian1_id"       =>"required",
             "pembagian1_nama"     =>"required",
             "pembagian1_ket"      =>"required",
 
@@ -74,7 +74,7 @@ class Pembagian1Controller extends Controller
         $pembagian1 = Pembagian1::find($pembagian1_id);
         $input = $request->validate([
            
-            //"pembagian1_id"       =>"required",
+            "pembagian1_id"       =>"required",
             "pembagian1_nama"     =>"required",
             "pembagian1_ket"      =>"required",
 

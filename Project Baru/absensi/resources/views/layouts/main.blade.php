@@ -17,6 +17,12 @@
   <link rel="stylesheet" href="{{ url('css/style.css')}}">
   <!-- endinject -->
   <link rel="shortcut icon" href="{{ url('images/favicon.png')}}" />
+
+  <!-- tambahkan css ini untuk cari-->
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/responsive/3.0.3/css/responsive.dataTables.css">
+
+
 </head>
 <body>
   <div class="container-scroller d-flex">
@@ -249,21 +255,32 @@
   <!-- container-scroller -->
 
   <!-- base:js -->
-  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <!-- <script src="vendors/js/vendor.bundle.base.js"></script> -->
   <!-- endinject -->
   <!-- Plugin js for this page-->
-  <script src="vendors/chart.js/Chart.min.js"></script>
+  <!-- <script src="vendors/chart.js/Chart.min.js"></script> -->
   <!-- End plugin js for this page-->
   <!-- inject:js -->
-  <script src="js/off-canvas.js"></script>
+  <!-- <script src="js/off-canvas.js"></script>
   <script src="js/hoverable-collapse.js"></script>
-  <script src="js/template.js"></script>
+  <script src="js/template.js"></script> -->
   <!-- endinject -->
   <!-- plugin js for this page -->
   <!-- End plugin js for this page -->
   <!-- Custom js for this page-->
-  <script src="js/dashboard.js"></script>
+  <!-- <script src="js/dashboard.js"></script> -->
   <!-- End custom js for this page-->
+
+  <!-- tambah  javascript ini-->
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+  <script src="https://cdn.datatables.net/responsive/3.0.3/js/dataTables.responsive.js"></script>
+  <script src="https://cdn.datatables.net/responsive/3.0.3/js/responsive.dataTables.js"></script>
+<script>
+  new DataTable('#example', {
+    responsive: true
+});
+</script>
 </body>
 
 </html>
