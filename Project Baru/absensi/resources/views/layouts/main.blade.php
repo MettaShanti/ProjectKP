@@ -278,7 +278,8 @@
   <script src="https://cdn.datatables.net/responsive/3.0.3/js/responsive.dataTables.js"></script>
 <script>
   new DataTable('#example', {
-    responsive: true
+    // responsive: true
+    scrollX: true
 });
 </script>
 </body>

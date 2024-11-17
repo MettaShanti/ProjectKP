@@ -1,23 +1,23 @@
 @extends('layouts.main')
 
 @section('content')
-<h4>Departement</h4>
-<form action="{{ route('pembagian2.store') }}" method="post">
+<h4>Departemen</h4>
+<form action="{{ route('pembagian2.store')}}" method="post">
     @csrf
 
-    Id Departement
+    Id Departemen
     @error('pembagian2_id')
         <span class="text-danger">({{ $message }})</span>
     @enderror
     <input type="numer" name="pembagian2_id" id="" class="form-control mb-2">
     
-    Nama Departement 
+    Nama Departemen 
     @error('pembagian2_nama')
         <span class="text-danger">({{ $message }})</span>
     @enderror
     <input type="text" name="pembagian2_nama" id="" class="form-control mb-2">
     
-    Keterangan Departement
+    Keterangan Departemen
     @error('pembagian2_ket')
         <span class="text-danger">({{ $message }})</span>
     @enderror 

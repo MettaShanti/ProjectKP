@@ -33,10 +33,10 @@ class Pembagian2Controller extends Controller
      */
     public function store(Request $request)
     {
-        //validasi input nama imput disamakan dengan tabel kolom
+        //validasi input nama, input disamakan dengan tabel kolom
         $input = $request->validate([
            
-            //"pembagian2_id"       =>"required",
+            "pembagian2_id"       =>"required",
             "pembagian2_nama"     =>"required",
             "pembagian2_ket"      =>"required",
 
@@ -74,7 +74,7 @@ class Pembagian2Controller extends Controller
         $pembagian2 = Pembagian2::find($pembagian2_id);
         $input = $request->validate([
            
-            //"pembagian2_id"       =>"required",
+            "pembagian2_id"       =>"required",
             "pembagian2_nama"     =>"required",
             "pembagian2_ket"      =>"required",
 

@@ -2,7 +2,7 @@
 
 @section('content')
 <h4>Divisi</h4>
-<form action="{{ route('pembagian3.store') }}" method="post">
+<form action="{{ route('pembagian3.store')}}" method="post">
     @csrf
 
     Id Divisi
