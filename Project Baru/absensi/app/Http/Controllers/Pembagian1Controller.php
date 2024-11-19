@@ -89,8 +89,11 @@ class Pembagian1Controller extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Pembagian1 $pembagian1)
+    public function destroy($pembagian1_id)
     {
-        //
+        $pembagian1 = Pembagian1::find($pembagian1_id);
+        
+        $pembagian1->delete();
+        return redirect()->route('pembagian1.index')->with('succes','Data Jabatan Berhasil di Hapus');
     }
 }

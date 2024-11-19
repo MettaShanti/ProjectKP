@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Spica Admin</title>
   <!-- base:css -->
-  <<link rel="stylesheet" href="{{ url('vendors/mdi/css/materialdesignicons.min.css') }}">
+  <link rel="stylesheet" href="{{ url('vendors/mdi/css/materialdesignicons.min.css') }}">
   <link rel="stylesheet" href="{{ url('vendors/css/vendor.bundle.base.css')}}">
   <!-- endinject -->
   <!-- plugin css for this page -->
@@ -33,7 +33,7 @@
           <p>Navigation</p>
           <span></span>
         </li>
-        <<li class="nav-item">
+        <li class="nav-item">
         <a class="nav-link" href="{{route('attlog.index')}}">
             <i class="mdi mdi-view-quilt menu-icon"></i>
             <span class="menu-title">Absensi</span>

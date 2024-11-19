@@ -135,8 +135,12 @@ class PegawaiController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Pegawai $pegawai)
+    public function destroy($pegawai_id)
     {
-        //
+        // cari data di table pegawai berdasarkan "pegawai_id" 
+        $pegawai = Pegawai::find($pegawai_id);
+        
+        $pegawai->delete();
+        return redirect()->route('pegawai.index')->with('succes','Data pegawai Berhasil di Hapus');
     }
 }

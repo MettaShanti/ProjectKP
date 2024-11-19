@@ -2,7 +2,7 @@
 
 @section('content')
 <h4>Jabatan</h4>
-<form action="{{ route('pembagian1.update', $pembagian1['id']) }}" method="post">
+<form action="{{ route('pembagian1.update')}}" method="post">
     @csrf
 
     Id Jabatan

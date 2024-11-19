@@ -37,25 +37,26 @@ class AttlogController extends Controller
     $input = $request->validate([
         "scan_date"   => "required|date", 
         "pin"         => "required",
-        "verifymode"  => "required",
-        "inoutmode"   => "required",
-        "reserved"    => "required",
-        "work_code"   => "required",
-        "att_id"      => "required"
+        // "verifymode"  => "required",
+        // "inoutmode"   => "required",
+        // "reserved"    => "required",
+        // "work_code"   => "required",
+        // "att_id"      => "required"
     ]);
 
     // Generate nilai untuk `sn` dengan format ATL-att_id-scandate
-    $generatedSn = 'ATL-' . $input['att_id'] . '-' . date('Ymd', strtotime($input['scan_date']));
+    //$generatedSn = 'ATL-' . $input['att_id'] . '-' . date('Ymd', strtotime($input['scan_date']));
 
     // Masukkan nilai `sn` yang sudah digenerate ke dalam data input
-    $input['sn'] = $generatedSn;
+    $input['sn'] = '665544424';
+    //$input['sn'] = $generatedSn;
 
     // verifymode yang diatas dihilangkan
-    $input['verifymode'] = '001';
-    $input['inoutmode'] = '001';
-    $input['reserved'] = '001';
-    $input['work_code'] = '001';
-    $input['att_id'] = '001';
+    $input['verifymode'] = '0';
+    $input['inoutmode'] = '0';
+    $input['reserved'] = '0';
+    $input['work_code'] = '0';
+    $input['att_id'] = '0';
 
     // Simpan ke database
     Attlog::create($input);
