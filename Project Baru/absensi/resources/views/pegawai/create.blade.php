@@ -21,7 +21,7 @@
     @error('pegawai_nip')
         <span class="text-danger">({{ $message }})</span>
     @enderror
-    <input type="text" name="pegawai_nip" id="" class="form-control mb-2">
+    <input type="numer" name="pegawai_nip" id="" class="form-control mb-2">
     
     Nama Pegawai
     @error('pegawai_nama')
@@ -57,13 +57,13 @@
     @error('pegawai_telp')
         <span class="text-danger">({{ $message }})</span>
     @enderror 
-    <input type="text" name="pegawai_telp" id="" class="form-control mb-2">
+    <input type="numer" name="pegawai_telp" id="" class="form-control mb-2">
 
     Status Pegawai
     @error('pegawai_status')
         <span class="text-danger">({{ $message }})</span>
     @enderror 
-    <input type="text" name="pegawai_status" id="" class="form-control mb-2">
+    <input type="numer" name="pegawai_status" id="" class="form-control mb-2">
 
     Tempat Lahir
     @error('tempat_lahir')
@@ -81,19 +81,19 @@
     @error('pembagian1_id')
         <span class="text-danger">({{ $message }})</span>
     @enderror 
-    <input type="text" name="pembagian1_id" id="" class="form-control mb-2">
+    <input type="numer" name="pembagian1_id" id="" class="form-control mb-2">
 
     Pembagian 2
     @error('pembagian2_id')
         <span class="text-danger">({{ $message }})</span>
     @enderror 
-    <input type="text" name="pembagian2_id" id="" class="form-control mb-2">
+    <input type="numer" name="pembagian2_id" id="" class="form-control mb-2">
 
     Pembagian 3
     @error('pembagian3_id')
         <span class="text-danger">({{ $message }})</span>
     @enderror 
-    <input type="text" name="pembagian3_id" id="" class="form-control mb-2">
+    <input type="numer" name="pembagian3_id" id="" class="form-control mb-2">
 
     Tanggal Mulai Kerja
     @error('tgl_mulai_kerja')
@@ -111,7 +111,7 @@
     @error('gender')
         <span class="text-danger">({{ $message }})</span>
     @enderror 
-    <input type="text" name="gender" id="" class="form-control mb-2">
+    <input type="numer" name="gender" id="" class="form-control mb-2">
 
     Tanggal Masuk Pertama
     @error('tgl_masuk_pertama')
@@ -147,25 +147,25 @@
     @error('no_rek')
         <span class="text-danger">({{ $message }})</span>
     @enderror 
-    <input type="text" name="no_rek" id="" class="form-control mb-2">
+    <input type="numer" name="no_rek" id="" class="form-control mb-2">
 
     Password Fio Desktop
     @error('password_fio_desktop')
         <span class="text-danger">({{ $message }})</span>
     @enderror 
-    <input type="text" name="password_fio_desktop" id="" class="form-control mb-2">
+    <input type="numer" name="password_fio_desktop" id="" class="form-control mb-2">
 
     Status Login Fio Desktop
     @error('status_login_fio_desktop')
         <span class="text-danger">({{ $message }})</span>
     @enderror 
-    <input type="text" name="status_login_fio_desktop" id="" class="form-control mb-2">
+    <input type="numer" name="status_login_fio_desktop" id="" class="form-control mb-2">
 
     New Pegawai Id
     @error('new_pegawai_id')
         <span class="text-danger">({{ $message }})</span>
     @enderror 
-    <input type="text" name="new_pegawai_id" id="" class="form-control mb-2">
+    <input type="numer" name="new_pegawai_id" id="" class="form-control mb-2">
 
 
     <button type="submit" class="btn btn-primary">Simpan</button>
