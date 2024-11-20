@@ -2,9 +2,9 @@
 
 @section('content')
 <h4>Departement</h4>
-<form action="{{ route('pembagian2.update'}}" method="post">
+<form action="{{ route('pembagian2.update', $pembagian2['pembagian2_id'])}}" method="post">
     @csrf
-
+    @method('PUT')
     Id Departement
     @error('pembagian2_id')
         <span class="text-danger">({{ $message }})</span>

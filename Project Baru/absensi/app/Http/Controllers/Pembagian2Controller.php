@@ -91,9 +91,19 @@ class Pembagian2Controller extends Controller
      */
     public function destroy($pembagian2_id)
     {
-        $pembagian2 = Pembagian2::find($pembagian2_id);
-        
-        $pembagian2->delete();
-        return redirect()->route('pembagian2.index')->with('succes','Data Departemen Berhasil di Hapus');
+    $pembagian2 = Pembagian2::find($pembagian2_id);
+
+    if (!$pembagian2) {
+        return redirect()->route('pembagian2.index')->with('error', 'Data not found.');
     }
+    $pembagian2->delete();
+    return redirect()->route('pembagian2.index')->with('success', 'Data Departemen Berhasil di Hapus');
+    }
+    // public function destroy($pembagian2_id)
+    // {
+    //     $pembagian2 = Pembagian2::find($pembagian2_id);
+        
+    //     $pembagian2->delete();
+    //     return redirect()->route('pembagian2.index')->with('succes','Data Departemen Berhasil di Hapus');
+    // }
 }

@@ -137,10 +137,20 @@ class PegawaiController extends Controller
      */
     public function destroy($pegawai_id)
     {
-        // cari data di table pegawai berdasarkan "pegawai_id" 
-        $pegawai = Pegawai::find($pegawai_id);
-        
-        $pegawai->delete();
-        return redirect()->route('pegawai.index')->with('succes','Data pegawai Berhasil di Hapus');
+    $pegawai = Pegawai::find($pegawai_id);
+
+    if (!$pegawai) {
+        return redirect()->route('pegawai.index')->with('error', 'Data not found.');
     }
+    $pegawai->delete();
+    return redirect()->route('pegawai.index')->with('success', 'Data Pegawai Berhasil di Hapus');
+    }
+    // public function destroy($pegawai_id)
+    // {
+    //     // cari data di table pegawai berdasarkan "pegawai_id" 
+    //     $pegawai = Pegawai::find($pegawai_id);
+        
+    //     $pegawai->delete();
+    //     return redirect()->route('pegawai.index')->with('succes','Data pegawai Berhasil di Hapus');
+    // }
 }

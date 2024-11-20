@@ -9,4 +9,5 @@ class Pembagian2 extends Model
 {
     use HasFactory;
     protected $fillable = ['pembagian2_id','pembagian2_nama','pembagian2_ket'];
+    protected $primaryKey = 'pembagian2_id';
 }

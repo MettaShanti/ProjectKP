@@ -13,4 +13,6 @@ class Pegawai extends Model
                             'tempat_lahir','tgl_lahir','pembagian1_id','pembagian2_id','pembagian3_id',
                             'tgl_mulai_kerja','tgl_resign','gender','tgl_masuk_pertama','photo_path',
                             'tmp_img','nama_bank','nama_rek','no_rek','password_fio_desktop','status_login_fio_desktop','new_pegawai_id'];
+                            
+    protected $primaryKey = 'pegawai_id';
 }

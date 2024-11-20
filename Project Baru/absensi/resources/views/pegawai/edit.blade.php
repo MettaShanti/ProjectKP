@@ -2,8 +2,15 @@
 
 @section('content')
 <h4>Detail Pegawai</h4>
-<form action="{{ route('pegawai.update'}}" method="post">
+<form action="{{ route('pegawai.update', $pegawai['pegawai_id'])}}" method="post">
     @csrf
+    @method('PUT') 
+    Id Pegawai
+    @error('pegawai_id')
+        <span class="text-danger">({{ $message }})</span>
+    @enderror
+    <input type="numer" name="pegawai_id" id="" class="form-control mb-2" value="{{ $pegawai['pegawai_id']}}">
+
     Pin Pegawai
     @error('pegawai_pin')
         <span class="text-danger">({{ $message }})</span>
@@ -74,19 +81,19 @@
     @error('pembagian1_id')
         <span class="text-danger">({{ $message }})</span>
     @enderror 
-    <input type="text" name="pembagian1_id" id="" class="form-control mb-2" value="{{ $pegawai['pembagian1_id']}}">
+    <input type="numer" name="pembagian1_id" id="" class="form-control mb-2" value="{{ $pegawai['pembagian1_id']}}">
 
     Pembagian 2
     @error('pembagian2_id')
         <span class="text-danger">({{ $message }})</span>
     @enderror 
-    <input type="text" name="pembagian2_id" id="" class="form-control mb-2" value="{{ $pegawai['pembagian2_id']}}">
+    <input type="numer" name="pembagian2_id" id="" class="form-control mb-2" value="{{ $pegawai['pembagian2_id']}}">
 
     Pembagian 3
     @error('pembagian3_id')
         <span class="text-danger">({{ $message }})</span>
     @enderror 
-    <input type="text" name="pembagian3_id" id="" class="form-control mb-2" value="{{ $pegawai['pembagian3_id']}}">
+    <input type="numer" name="pembagian3_id" id="" class="form-control mb-2" value="{{ $pegawai['pembagian3_id']}}">
 
     Tanggal Mulai Kerja
     @error('tgl_mulai_kerja')
@@ -166,33 +173,3 @@
 </form>
 
 @endsection
-
-<!-- Pembagian 1
-    @error('pembagian1_id ')
-        <span class="text-danger">({{ $message }})</span>
-    @enderror 
-    <select name="pembagian1_id" class="form-control" value="{{ $pegawai['pembagian1_id']}}">
-        @foreach ($pembagian1 as $item)
-            <option value="{{ $item['id'] }}" {{$item['id'] == $pembagian1['pembagian1_id'] ? "selected":null}} > {{ $item['pembagian1_nama'] }} </option>
-        @endforeach
-    </select>
-
-    Pembagian 2
-    @error('pembagian2_id ')
-        <span class="text-danger">({{ $message }})</span>
-    @enderror 
-    <select name="pembagian2_id" class="form-control" value="{{ $pegawai['pembagian2_id']}}">
-        @foreach ($pembagian2 as $item)
-            <option value="{{ $item['id'] }}" {{$item['id'] == $pembagian1['pembagian2_id'] ? "selected":null}} > {{ $item['pembagian2_nama'] }} </option>
-        @endforeach
-    </select>
-
-    Pembagian 3
-    @error('pembagian1_id ')
-        <span class="text-danger">({{ $message }})</span>
-    @enderror 
-    <select name="pembagian3_id" class="form-control" value="{{ $pegawai['pembagian3_id']}}">
-        @foreach ($pembagian3 as $item)
-            <option value="{{ $item['id'] }}" {{$item['id'] == $pembagian1['pembagian3_id'] ? "selected":null}} > {{ $item['pembagian3_nama'] }} </option>
-        @endforeach
-    </select> -->

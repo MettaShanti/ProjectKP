@@ -91,9 +91,19 @@ class Pembagian3Controller extends Controller
      */
     public function destroy($pembagian3_id)
     {
-        $pembagian3 = Pembagian3::find($pembagian3_id);
-        
-        $pembagian3->delete();
-        return redirect()->route('pembagian3.index')->with('succes','Data Divisi Berhasil di Hapus');
+    $pembagian3 = Pembagian3::find($pembagian3_id);
+
+    if (!$pembagian3) {
+        return redirect()->route('pembagian3.index')->with('error', 'Data not found.');
     }
+    $pembagian3->delete();
+    return redirect()->route('pembagian3.index')->with('success', 'Data Divisi Berhasil di Hapus');
+    }
+    // public function destroy($pembagian3_id)
+    // {
+    //     $pembagian3 = Pembagian3::find($pembagian3_id);
+        
+    //     $pembagian3->delete();
+    //     return redirect()->route('pembagian3.index')->with('succes','Data Divisi Berhasil di Hapus');
+    // }
 }
