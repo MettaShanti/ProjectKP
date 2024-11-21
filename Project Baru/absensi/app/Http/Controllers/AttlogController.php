@@ -35,13 +35,14 @@ class AttlogController extends Controller
 {
     // Validasi input, tanpa `sn` karena akan di-generate otomatis
     $input = $request->validate([
-        "scan_date"   => "required|date", 
+        "scan_date"   => "required", 
+        //"scan_date"   => "required|date", 
         "pin"         => "required",
         // "verifymode"  => "required",
         // "inoutmode"   => "required",
         // "reserved"    => "required",
         // "work_code"   => "required",
-        // "att_id"      => "required"
+        //"att_id"      => "required"
     ]);
 
     // Generate nilai untuk `sn` dengan format ATL-att_id-scandate
