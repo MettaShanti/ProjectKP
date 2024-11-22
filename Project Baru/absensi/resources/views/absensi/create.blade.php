@@ -10,11 +10,11 @@
     @enderror
     <input type="numer" name="sn" id="" class="form-control mb-2"> -->
     
-    Scan Date 
+    <!-- Scan Date 
     @error('scan_date')
         <span class="text-danger">({{ $message }})</span>
     @enderror
-    <input type="datetime-local" name="scan_date" id="" class="form-control mb-2">
+    <input type="datetime-local" name="scan_date" id="" class="form-control mb-2"> -->
     
     Pin
     @error('pin')

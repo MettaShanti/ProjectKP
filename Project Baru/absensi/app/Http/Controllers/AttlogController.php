@@ -35,7 +35,7 @@ class AttlogController extends Controller
 {
     // Validasi input, tanpa `sn` karena akan di-generate otomatis
     $input = $request->validate([
-        "scan_date"   => "required", 
+        //"scan_date"   => "required", 
         //"scan_date"   => "required|date", 
         "pin"         => "required",
         // "verifymode"  => "required",
@@ -58,6 +58,7 @@ class AttlogController extends Controller
     $input['reserved'] = '0';
     $input['work_code'] = '0';
     $input['att_id'] = '0';
+    $input['scan_date'] = date('Y-m-d h:i:s');
 
     // Simpan ke database
     Attlog::create($input);
