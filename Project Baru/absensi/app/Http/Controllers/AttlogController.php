@@ -58,6 +58,7 @@ class AttlogController extends Controller
     $input['reserved'] = '0';
     $input['work_code'] = '0';
     $input['att_id'] = '0';
+    //$input['scan_date'] = date('Y-m-d H:i:s');
     $input['scan_date'] = date('Y-m-d h:i:s');
 
     // Simpan ke database
