@@ -55,9 +55,9 @@ class AttlogController extends Controller
     // verifymode yang diatas dihilangkan
     $input['verifymode'] = '0';
     $input['inoutmode'] = '0';
-    $input['reserved'] = '0';
+    $input['reserved'] = '1';
     $input['work_code'] = '0';
-    $input['att_id'] = '0';
+    $input['att_id'] = '1';
     //$input['scan_date'] = date('Y-m-d H:i:s');
     $input['scan_date'] = date('Y-m-d h:i:s');
 
