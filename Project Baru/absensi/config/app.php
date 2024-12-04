@@ -64,9 +64,9 @@ return [
     | is set to "UTC" by default as it is suitable for most use cases.
     |
     */
-
-    'timezone' => env('APP_TIMEZONE', 'UTC'),
-
+    //'timezone' => 'Asia/Jakarta',
+    //'timezone' => env('APP_TIMEZONE', 'UTC'),
+    'timezone' => env('APP_TIMEZONE', 'Asia/Jakarta'),
     /*
     |--------------------------------------------------------------------------
     | Application Locale Configuration
@@ -77,13 +77,17 @@ return [
     | set to any locale for which you plan to have translation strings.
     |
     */
+    'locale' => env('APP_LOCALE', 'id'),
 
-    'locale' => env('APP_LOCALE', 'en'),
+    'fallback_locale' => env('APP_FALLBACK_LOCALE', 'id'),
 
-    'fallback_locale' => env('APP_FALLBACK_LOCALE', 'en'),
+    'faker_locale' => env('APP_FAKER_LOCALE', 'id_ID'),
 
-    'faker_locale' => env('APP_FAKER_LOCALE', 'en_US'),
+    // 'locale' => env('APP_LOCALE', 'en'),
 
+    // 'fallback_locale' => env('APP_FALLBACK_LOCALE', 'en'),
+
+    // 'faker_locale' => env('APP_FAKER_LOCALE', 'en_US'),
     /*
     |--------------------------------------------------------------------------
     | Encryption Key

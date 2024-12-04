@@ -289,6 +289,17 @@
     scrollX: true
 });
 </script>
-</body>
 
+{{-- sweetAlert --}}
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  @session('success')
+  <script>
+    Swal.fire({
+    title: "Good job!",
+    text: "{{ Session('success')}}",
+    icon: "success"
+  });
+  </script>
+  @endsession
+</body>
 </html>
