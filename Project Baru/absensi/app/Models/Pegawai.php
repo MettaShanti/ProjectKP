@@ -15,4 +15,9 @@ class Pegawai extends Model
                             'tmp_img','nama_bank','nama_rek','no_rek','password_fio_desktop','status_login_fio_desktop','new_pegawai_id'];
                             
     protected $primaryKey = 'pegawai_id';
+
+    public function pembagian1()
+    {
+        return $this->belongsTo(Pembagian1::class,'pembagian1','pembagian1_id');
+    }
 }

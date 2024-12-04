@@ -83,7 +83,8 @@
             <a class="navbar-brand brand-logo" href="index.html"><img src="logo.jpg" alt="logo"/></a>
             <a class="navbar-brand brand-logo-mini" href="index.html"><img src="logo-mini.jpg" alt="logo"/></a>
           </div>
-          <h4 class="font-weight-bold mb-0 d-none d-md-block mt-1">Welcome back</h4>
+          {{-- user login --}}
+          <h4 class="font-weight-bold mb-0 d-none d-md-block mt-1">Welcome back, {{ Auth::user()->name }}</h4>
           <ul class="navbar-nav navbar-nav-right">
             <li class="nav-item">
             </li>
@@ -197,17 +198,23 @@
             <li class="nav-item nav-profile dropdown">
               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
                 <img src="images/faces/face5.jpg" alt="profile"/>
-                <span class="nav-profile-name">#</span>
+                {{-- user login --}}
+                <span class="nav-profile-name">{{ Auth::user()->name }}</span>
               </a>
               <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
                 <a class="dropdown-item">
                   <i class="mdi mdi-settings text-primary"></i>
                   Settings
                 </a>
-                <a class="dropdown-item">
-                  <i class="mdi mdi-logout text-primary"></i>
-                  Logout
-                </a>
+                <!-- Authentication -->
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                      <x-dropdown-link :href="route('logout')"
+                          onclick="event.preventDefault();
+                          this.closest('form').submit();" class="dropdown-item">
+                        <i class="mdi mdi-logout text-primary"></i> {{ __('Log Out') }}
+                      </x-dropdown-link>
+                  </form>
               </div>
             </li>
             <li class="nav-item">
