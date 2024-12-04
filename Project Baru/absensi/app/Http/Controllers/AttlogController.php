@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Attlog;
 use Illuminate\Http\Request;
 
+
 class AttlogController extends Controller
 {
     /**
@@ -59,7 +60,8 @@ class AttlogController extends Controller
     $input['work_code'] = '0';
     $input['att_id'] = '1';
     //$input['scan_date'] = date('Y-m-d H:i:s');
-    $input['scan_date'] = date('Y-m-d h:i:s');
+    //$input['scan_date'] = date('Y-m-d h:i:s');
+    $input['scan_date'] = now();
 
     // Simpan ke database
     Attlog::create($input);
@@ -67,7 +69,6 @@ class AttlogController extends Controller
     // Redirect beserta pesan sukses
     return redirect()->route('attlog.index')->with('success', 'Berhasil Disimpan');
 }
-
 
     /**
      * Display the specified resource.
