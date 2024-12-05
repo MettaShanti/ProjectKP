@@ -31,5 +31,7 @@ Route::resource('pembagian3', Pembagian3Controller::class);
 Route::resource('attlog', AttlogController::class);
 Route::resource('absenreport', AbsenreportController::class);
 
-
+//cetak
+Route::get('/cetak', [AttlogController::class, 'cetak'])->name('cetak');
+//Route::get('/Cetak','AttlogController@cetak')->name('cetak')
 require __DIR__.'/auth.php';
