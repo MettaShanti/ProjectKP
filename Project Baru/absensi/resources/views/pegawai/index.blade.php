@@ -19,9 +19,9 @@
                 <th>Status Pegawai</th>
                 <th>Tempat Lahir</th>
                 <th>Tgl Lahir</th>
-                <th>Jabatan</th>
-                <th>Departemen</th>
-                <th>Divisi</th>
+                <th>ID Jabatan</th>
+                <th>ID Departemen</th>
+                <th>ID Divisi</th>
                 <th>Tgl Mulai Kerja</th>
                 <th>Tgl Resign</th>
                 <th>Gender</th>
