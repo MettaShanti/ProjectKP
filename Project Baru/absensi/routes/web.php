@@ -10,13 +10,14 @@ use App\Http\Controllers\Pembagian3Controller;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    //return view('layouts.main');
-    return view('auth.loginnew');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+//     //return view('auth.loginnew');
+// });
 
-
-Route::get('/dashboard',[DashboardController::class, 'index'])->name('dashboard')->middleware(['auth', 'verified']);
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -24,12 +25,12 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::resource('pegawai', PegawaiController::class)->middleware(['auth', 'verified']);
-Route::resource('pembagian1', Pembagian1Controller::class)->middleware(['auth', 'verified']);
-Route::resource('pembagian2', Pembagian2Controller::class)->middleware(['auth', 'verified']);
-Route::resource('pembagian3', Pembagian3Controller::class)->middleware(['auth', 'verified']);
-Route::resource('attlog', AttlogController::class)->middleware(['auth', 'verified']);
-Route::resource('absenreport', AbsenreportController::class)->middleware(['auth', 'verified']);
+Route::resource('pegawai', PegawaiController::class);
+Route::resource('pembagian1', Pembagian1Controller::class);
+Route::resource('pembagian2', Pembagian2Controller::class);
+Route::resource('pembagian3', Pembagian3Controller::class);
+Route::resource('attlog', AttlogController::class);
+Route::resource('absenreport', AbsenreportController::class);
 
 //cetak
 Route::get('/cetak', [AttlogController::class, 'cetak'])->name('cetak');
