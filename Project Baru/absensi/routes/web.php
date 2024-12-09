@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::get('/', function () {
     // tambahkan auth.loginnew dan hilangkan welcome
-    return view('welcome');
+    return view('auth.loginnew');
 });
 
 // Route::get('/', function () {
