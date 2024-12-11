@@ -2,10 +2,26 @@
 
 @section('content')
     <h4>Laporan</h4>
-    <!-- <a href="{{route('absenreport.create')}}" class="btn btn-primary">TAMBAH</a> -->
+    <a href="{{route('absenreport.create')}}" class="btn btn-primary">Cetak</a>
     <table id="example" class="display nowrap" style="width:100%">
         <thead>
             <tr>
+                <div class="filter mt-3 mb-3">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label>Creation Date:</label><br>
+                            <input type="text" name="daterange" value="" class="form-control daterange" />
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-md-2">
+                    <label>Start date:</label>
+                    <input type="start_date" class="form-control">
+                </div>
+                <div class="col-md-2">
+                    <label>End date:</label>
+                    <input type="end_date" class="form-control">
+                </div> -->
                 <th>Id Pegawai</th>
                 <th>Pin Pegawai</th>
                 <th>Nip Pegawai</th>
@@ -43,4 +59,7 @@
             @endforeach
             </tbody>
         </table>
+
+        $('daterange').daterangepicker();
+
 @endsection
